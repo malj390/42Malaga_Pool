@@ -23,6 +23,47 @@ set mouse=a
 :set invnumber
 :set autoindent (or set ai)
 
+# BASH (basic commands)
+
+```
+pwd
+ls
+cd
+cat
+echo
+mv
+head
+tail
+touch
+truncate
+chmod
+grep
+tr
+find
+```
+
+# GIT
+```
+git add
+git commit -m "Message"
+git push
+git status
+git pull
+git reset --hard
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Terminal fun
 
 ```
