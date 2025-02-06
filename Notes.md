@@ -3,26 +3,36 @@
 ## Shortcuts
 
 ### Insert Mode
+
+```
 Ctrl + N - Autocomplete
 
+```
 ### Escape Mode
+
+```
 gg - Go to the beggining of a document
 G - go to the end
 
+```
 ## Settings
 
 ### Adviced to have in .vimrc
 
+```
 set number
 set list
 set mouse=a
 
+```
 
 ### Others
 
+```
 :set invnumber
 :set autoindent (or set ai)
 
+```
 # BASH (basic commands)
 
 ```
@@ -44,15 +54,20 @@ find
 
 # GIT
 ```
-git add
+git add --all
 git commit -m "Message"
 git push
 git status
 git pull
-git reset --hard
+git reset --hard: useful when local changes must be discarded.
 ```
 
+# Checks and Compilation
 
+```
+Norminette -R [file or folder with exercises]
+cc 
+```
 
 
 
