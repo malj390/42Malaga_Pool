@@ -2,13 +2,23 @@
 
 ## Shortcuts
 
+### Insert Mode
 Ctrl + N - Autocomplete
 
-## Decorations
+### Escape Mode
+gg - Go to the beggining of a document
+G - go to the end
+
+## Settings
+
+### Adviced to have in .vimrc
 
 set number
 set list
 set mouse=a
 
-set invnumber
 
+### Others
+
+:set invnumber
+:set autoindent (or set ai)
