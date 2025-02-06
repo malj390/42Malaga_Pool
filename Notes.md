@@ -25,8 +25,8 @@ set mouse=a
 
 # Terminal fun
 
-"""
+```
 cmatrix
 
 curl parrot.live
-"""
+```
