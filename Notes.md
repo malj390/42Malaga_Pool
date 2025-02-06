@@ -66,7 +66,8 @@ git reset --hard: useful when local changes must be discarded.
 
 ```
 Norminette -R [file or folder with exercises]
-cc 
+cc -Wall -Wextra -Werror ft_files.c main.c
+./a.out
 ```
 
 
