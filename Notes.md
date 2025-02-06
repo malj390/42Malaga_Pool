@@ -22,3 +22,11 @@ set mouse=a
 
 :set invnumber
 :set autoindent (or set ai)
+
+# Terminal fun
+
+"""
+cmatrix
+
+curl parrot.live
+"""
