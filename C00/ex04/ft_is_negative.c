@@ -6,7 +6,7 @@
 /*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 17:19:24 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/07 10:14:47 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/07 12:30:37 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -21,6 +21,10 @@ void	ft_is_negative(int c)
 
 int	main(void)
 {
-	ft_is_negative();
+	ft_is_negative(-42);
+	write(1, "\n", 1);
+	ft_is_negative(0);
+	write(1, "\n", 1);
+	ft_is_negative(42);
 	return (0);
 }

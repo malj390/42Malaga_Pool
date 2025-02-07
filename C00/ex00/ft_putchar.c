@@ -6,7 +6,7 @@
 /*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 10:05:02 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/07 10:13:55 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/07 12:24:20 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_putchar(char c)
 
 int	main(void)
 {
-	ft_putchar();
+	ft_putchar('a');
 	return (0);
 }

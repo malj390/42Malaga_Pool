@@ -11,6 +11,10 @@ Ctrl + N - Autocomplete
 ### Escape Mode
 
 ```
+:q - Exit
+:q! - Exit 
+:w - write
+:wq or :x - write and exit
 gg - Go to the beggining of a document
 G - go to the end
 
