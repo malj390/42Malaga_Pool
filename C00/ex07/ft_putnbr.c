@@ -6,7 +6,7 @@
 /*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 09:33:46 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/01/31 09:49:12 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/07 10:02:35 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void	ft_putnbr(int n)
 
 int	main(void)
 {
-	ex07/ft_putnbr();
+	ft_putnbr();
 	return (0);
 }

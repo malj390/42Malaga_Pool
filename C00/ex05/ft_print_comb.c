@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 19:14:48 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/03 15:08:54 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/07 10:15:15 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ void	ft_print_comb(void)
 
 int	main(void)
 {
-	ex05/ft_print_comb();
+	ft_print_comb();
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 16:02:53 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/03 15:09:09 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/07 10:13:41 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	ft_print_reverse_alphabet(void)
 
 int	main(void)
 {
-	ex02/ft_print_reverse_alphabet();
+	ft_print_reverse_alphabet();
 	return (0);
 }

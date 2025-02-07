@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 17:19:24 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/03 15:09:00 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/07 10:14:47 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -21,6 +21,6 @@ void	ft_is_negative(int c)
 
 int	main(void)
 {
-	ex04/ft_is_negative();
+	ft_is_negative();
 	return (0);
 }
