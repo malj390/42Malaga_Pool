@@ -21,7 +21,6 @@ G - go to the end
 
 ```
 set number
-set list
 set mouse=a
 
 ```
@@ -29,6 +28,7 @@ set mouse=a
 ### Others
 
 ```
+:set list
 :set invnumber
 :set autoindent (or set ai)
 
