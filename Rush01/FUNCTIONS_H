@@ -1,0 +1,34 @@
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+void	ft_putchar(char c);
+
+void	ft_putnbr(int n);
+
+int	my_atoi(char *p);
+
+int*	create_dynamic_array(int size);
+
+void	print_array(int* array, int size);
+
+void store_args_in_array(int* array, char **argv, int size);
+
+void	set_value_at(int* array, int row, int col, int size, int value);
+
+void	set_value_at_row_f(int* array, int row, int size, int value);
+
+void	set_value_at_row_b(int* array, int row, int size, int value);
+
+void	set_value_at_col_f(int* array, int col, int size, int value);
+
+void	set_value_at_col_b(int* array, int col, int size, int value);
+
+void	fill_array(int* array, int size, int value);
+
+void	check_number(int* array, int row, int size, int value);
+
+#endif
