@@ -61,27 +61,60 @@ void set_value_at(int* array, int row, int col, int size, int value) {
 }
 
 // Función para recorrer una fila
-void set_value_at_row(int* array, int row, int size, int value) {
+void set_value_at_row_f(int* array, int row, int size, int value) {
     
     int col;
+    int pr;
 
     col = 0;
+    pr = 0;
     while( col < size)
     {
-        array[row * size + col] = value;
+        array[row * size + col] = value + pr;
         col++;
+        pr++;
+    }
+}
+
+// Función para recorrer una fila
+void set_value_at_row_b(int* array, int row, int size, int value) {
+    
+    int col;
+    int pr;
+
+    col = size - 1;
+    pr = 0;
+    while(col >= 0)
+    {
+        array[row * size + col] = value + pr;
+        col--;
+        pr++;
     }
 }
 
 // Función para recorrer una columna
-void set_value_at_col(int* array, int col, int size, int value) {
+void set_value_at_col_f(int* array, int col, int size, int value) {
     int row = 0;
+    int pr = 0;
     
     while (row < size) {
-        array[row * size + col] = value;
+        array[row * size + col] = value + pr;
         row++;
+        pr++;
     }
 }
+
+void set_value_at_col_b(int* array, int col, int size, int value) {
+    int row = size - 1;  // Start from the last row
+    int pr = 0;
+
+    while (row >= 0) {  // Loop backwards
+        array[row * size + col] = value + pr;
+        row--;  // Move upwards
+        pr++;
+    }
+}
+
 
 // Función para llenar todo el array
 void fill_array(int* array, int size, int value) {
@@ -99,7 +132,8 @@ void fill_array(int* array, int size, int value) {
 
 int main(void) {
     int size = 4;
-    int* array = create_dynamic_array(size);  // Crear un array 4x4 dinámico
+    int* array = create_dynamic_array(size);  // Crear un array 4x4 dinámico solucion
+
 
     if (array == NULL) {
         printf("Error: No se pudo asignar memoria.\n");
@@ -107,10 +141,12 @@ int main(void) {
     }
 
 
-    fill_array(array, 4, 9);
-    //set_value_at(array, 0, 0, 4, 1);
-    set_value_at_row(array, 1, 4, 1);
-    set_value_at_col(array, 2, 4, 2);
+    fill_array(array, 4, 0);
+    //set_value_at(array, 1, 1, size, 9);
+    //set_value_at_col_f(array, 0, size, 1);
+    set_value_at_row_f(array, 0, size, 1);
+    set_value_at_row_b(array, 2, size, 1);
+    //set_value_at_col_b(array, 2, size, 1);
 
     print_array(array, 4); 
 
