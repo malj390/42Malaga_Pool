@@ -83,28 +83,41 @@ void	fill_array(int* array, int size, int value)
 	}
 }
 
-void	check_number(int* array, int row, int size, int value)
+int	check_height_in_row(int* array, int row, int size, int value)
 {
 	int col;
-	int pr;
-	int digit;
-	int counter;
+	int isthere;
 
+	isthere = 0;  
 	col = 0;
-	pr = 0;
-	while( col < size)
+	while (col < size)
 	{
-		digit = array[row * size + col];
-		if (digit == size)
+		if (array[row * size + col] == value)
 		{
-			counter = counter + 1;
-			size--;
-		}
-		else
-		{
-			check_number(array, row, size, value);
+			isthere = 1;  // Set to 1 if value is found
+			break;        // No need to check further
 		}
 		col++;
 	}
-	printf("%d", counter);
+	return (isthere);
+}
+
+int	check_height_in_col(int* array, int col, int size, int value)
+{
+	int row;
+	int isthere;
+
+	row = 0;
+	isthere = 0;
+	while (row < size) 
+	{
+		if (array[row * size + col] == value)
+		{
+			isthere = 1;
+			break;
+		}
+		row++;
+	}
+	
+	return (isthere);
 }

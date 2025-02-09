@@ -29,6 +29,10 @@ void	set_value_at_col_b(int* array, int col, int size, int value);
 
 void	fill_array(int* array, int size, int value);
 
-void	check_number(int* array, int row, int size, int value);
+int	check_height_in_row(int* array, int row, int size, int value);
+
+int	check_height_in_col(int* array, int col, int size, int value);
+
+//void	check_number(int* array, int row, int size, int value);
 
 #endif

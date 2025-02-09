@@ -2,6 +2,7 @@
 
 int main(int argc, char **argv) {
     int size = 4;
+    int isthere;
 
     if (argc != 17) {  // 16 numbers + program name
         printf("Error: Expected 16 numbers as arguments.\n");
@@ -15,7 +16,7 @@ int main(int argc, char **argv) {
     }
 
     store_args_in_array(clues, argv, size); 
-    print_array(clues, size);
+    //print_array(clues, size);
     ft_putchar('\n');
 
     int* array = create_dynamic_array(size);
@@ -27,14 +28,19 @@ int main(int argc, char **argv) {
 		}
 
 	fill_array(array, 4, 0);
-	//set_value_at(array, 1, 1, size, 9);
+	set_value_at(array, 0, 0, size, 2);
+	
+	//set_value_at_row_f(array, 0, size, 1);
+	//set_value_at_row_b(array, 2, size, 1);
+
 	//set_value_at_col_f(array, 0, size, 1);
-	set_value_at_row_f(array, 0, size, 1);
-	set_value_at_row_b(array, 2, size, 1);
 	//set_value_at_col_b(array, 2, size, 1);
 
 	print_array(array, 4); 
-	check_number(array, 0, size, 4);
+	isthere = 10;
+	isthere = check_height_in_row(array, 0, size, 2);
+	//check_number(array, 0, size, 4);
+	ft_putnbr(isthere);
 
 	// Liberamos la memoria
 	free(array);
