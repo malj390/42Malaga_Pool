@@ -15,9 +15,11 @@ int*	create_dynamic_array(int size);
 
 void	print_array(int* array, int size);
 
-void store_args_in_array(int* array, char **argv, int size);
+void store_args_in_2Darray(int* clues, char **argv, int size);
 
-void	set_value_at(int* array, int row, int col, int size, int value);
+void store_args_in_1Darray(int* clues, char **argv);
+
+void	set_value_at(int* array, int* rowcol, int size, int value);
 
 void	set_value_at_row_f(int* array, int row, int size, int value);
 
@@ -27,11 +29,15 @@ void	set_value_at_col_f(int* array, int col, int size, int value);
 
 void	set_value_at_col_b(int* array, int col, int size, int value);
 
-void	fill_array(int* array, int size, int value);
+void	fill_array(int* array, int* rowcol, int size, int value);
 
-int	check_height_in_row(int* array, int row, int size, int value);
+int is_valid(int* array, int size, int* rowcol, int value);
 
-int	check_height_in_col(int* array, int col, int size, int value);
+int check_visibility(int* array, int* clues, int size);
+
+int solve(int* array, int* clues , int size, int* rowcol);
+
+int count_visible(int *line);
 
 //void	check_number(int* array, int row, int size, int value);
 
