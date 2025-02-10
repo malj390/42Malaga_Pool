@@ -1,4 +1,4 @@
-# Vim 
+# Vim
 
 ## Shortcuts
 
@@ -8,7 +8,7 @@
 Ctrl + N - Autocomplete
 
 ```
-### Escape Mode
+### Normal Mode (ESC)
 
 ```
 :q - Exit
@@ -17,6 +17,14 @@ Ctrl + N - Autocomplete
 :wq or :x - write and exit
 gg - Go to the beggining of a document
 G - go to the end
+0 - go to the beggining of the line
+a - go to the end and Enter in INSERT MODE
+
+dd - remove line
+d2d - remove 2 lines under cursor
+yy - copy line
+y2y - copy 2 lines under cursor
+p - paste line/block under cursor
 
 ```
 ## Settings
@@ -54,6 +62,7 @@ chmod
 grep
 tr
 find
+rm 
 ```
 
 # GIT
@@ -63,7 +72,8 @@ git commit -m "Message"
 git push
 git status
 git pull
-git reset --hard: useful when local changes must be discarded.
+git reset --hard: useful when local changes must be discarded
+rm -rf : to remove git folders from evaluations
 ```
 
 # Checks and Compilation
