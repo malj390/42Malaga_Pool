@@ -48,6 +48,7 @@ set mouse=a
 # BASH (basic commands)
 
 ```
+man
 pwd
 ls
 cd
@@ -63,6 +64,14 @@ grep
 tr
 find
 rm 
+sed
+awk
+sort
+cut
+rev
+paste
+bc
+basename
 ```
 
 # GIT
@@ -74,14 +83,19 @@ git status
 git pull
 git reset --hard: useful when local changes must be discarded
 rm -rf : to remove git folders from evaluations
+git config --global user.name "name"
+git config --global user.email "name@email.com"
 ```
 
 # Checks and Compilation
 
 ```
 Norminette -R [file or folder with exercises]
-cc -Wall -Wextra -Werror ft_files.c main.c
+cc -Wall -Wextra -Werror ft_files.c main.c    OR    *.c
 ./a.out
+
+Optional: cc -Wall -Wextra -Werror ft_files.c main.c -o program.out
+./program.out
 ```
 
 
