@@ -73,6 +73,29 @@ paste
 bc
 basename
 ```
+# 42 Header
+
+For bash add to ~/.bashrc
+```
+export USER=name
+export MAIL=email
+```
+
+For zsh add to ~/.zshrc
+```
+export USER=name
+export MAIL=email
+```
+
+For fish add to ~/.config/fish/config.fish
+```
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+	set -x USER name
+	set -x MAIL email
+end
+```
+
 
 # GIT
 ```
