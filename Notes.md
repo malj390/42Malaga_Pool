@@ -99,8 +99,48 @@ Optional: cc -Wall -Wextra -Werror ft_files.c main.c -o program.out
 ```
 
 
+# Tricks
+
+## Execute all a.out files from all ex directories (FISH)
+
+```
+for i in (find . -name "*.out")
+	printf "\n%s\n---------\n" $i
+    ./$i
+    printf "\n"
+end
+
+## Search all includes from the ft files (FISH)
+
+```
+for i in (find . -name "ft*")
+	printf "\n%s\n---------\n" $i    
+    cat $i | grep "#include"
+    printf "\n" 
+end
+```
+
+## Search all main from ft files IT SHOULD BE EMPTY (FISH)
+
+```
+for i in (find . -name "ft*")
+	printf "\n%s\n---------\n" $i    
+    cat $i | grep "main"
+    printf "\n" 
+end
+```
 
 
+
+
+
+
+
+
+# Terminal fun
+
+```
+cmatrix
 
 
 
