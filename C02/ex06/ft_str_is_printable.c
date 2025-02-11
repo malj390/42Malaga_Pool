@@ -6,11 +6,11 @@
 /*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:47:41 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/11 10:45:18 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:27:05 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
 

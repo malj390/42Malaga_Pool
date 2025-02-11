@@ -6,7 +6,7 @@
 /*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 13:25:09 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/11 15:35:11 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:25:10 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_str_is_alpha(char *str)
 	while (str[i] != '\0')
 	{
 		if ((str[i] <= 'z' && str[i] >= 'a')
-				|| (str[i] <= 'Z' && str[i] >= 'A' ))
+			|| (str[i] <= 'Z' && str[i] >= 'A' ))
 		{
 			res = res * 1;
 		}

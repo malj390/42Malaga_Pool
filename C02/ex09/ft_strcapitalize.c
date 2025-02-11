@@ -6,16 +6,16 @@
 /*   By: mlermo-j <mlermo@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 11:43:38 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/11 12:42:28 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:30:19 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcapitalize(char *str)
-{	
+char	*ft_strcapitalize(char *str)
+{
 	int	i;
-	
+
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		if (i == 0)
 		{
@@ -25,7 +25,7 @@ char *ft_strcapitalize(char *str)
 		{
 			str[i] = str[i] - 32;
 		}
-	i++;
+		i++;
 	}
 	return (str);
 }

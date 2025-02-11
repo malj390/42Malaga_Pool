@@ -6,18 +6,18 @@
 /*   By: mlermo-j <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 11:04:19 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/11 11:36:55 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:27:57 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
 	int	i;
-	int dif;
+	int	dif;
 
 	i = 0;
 	dif = 'a' - 'A';
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
 		{
@@ -27,4 +27,3 @@ char *ft_strupcase(char *str)
 	}
 	return (str);
 }
-

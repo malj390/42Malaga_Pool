@@ -6,11 +6,11 @@
 /*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 19:47:41 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/10 20:40:17 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:25:58 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_lowercase(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	int	i;
 	int	res;
@@ -29,8 +29,7 @@ int ft_str_is_lowercase(char *str)
 		{
 			res = res * 1;
 		}
-
 		i++;
 	}
-	return(res);
+	return (res);
 }
