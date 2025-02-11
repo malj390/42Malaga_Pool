@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 char *ft_strupcase(char *str);
 
@@ -18,10 +19,13 @@ int main(void)
 {
     char str[] = "esta frase estaba en minuscula"; // Cadena mutable
     char *res;
+    char *res2;
 
     printf("Before: %s\n", str);
     res = ft_strupcase(str);
     printf("After: %s\n", res);
+    res2 = ft_strupcase(str);
+    printf("After (oficial): %s\n", res2);
     return (0);
 }
 
