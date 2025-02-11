@@ -109,6 +109,7 @@ for i in (find . -name "*.out")
     ./$i
     printf "\n"
 end
+```
 
 ## Search all includes from the ft files (FISH)
 
@@ -129,7 +130,6 @@ for i in (find . -name "ft*")
     printf "\n" 
 end
 ```
-
 
 
 
