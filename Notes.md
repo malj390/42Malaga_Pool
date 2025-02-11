@@ -154,23 +154,6 @@ for i in (find . -name "ft*")
 end
 ```
 
-
-
-
-
-
-
-# Terminal fun
-
-```
-cmatrix
-
-
-
-
-
-
-
 # Terminal fun
 
 ```
