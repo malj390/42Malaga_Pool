@@ -30,8 +30,17 @@ function check_header
     end
 end
 
+function check_ftnames
+    for i in (find . -name "ft*")
+        printf "\n%s\n---------\n" $i    
+        cat $i | grep "ft_"
+        printf "\n" 
+    end
+end
+
 funcsave check_outputs
 funcsave check_includes
 funcsave check_ft_nomain
 funcsave check_header
+funcsave check_ftnames
 
