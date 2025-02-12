@@ -6,7 +6,7 @@
 /*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 11:04:19 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/11 18:28:39 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/12 11:15:57 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strlowcase(char *str)
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			str[i] = str[i] + 32;
+			str[i] = str[i] + dif; // dif is 32
 		}
 		i++;
 	}
