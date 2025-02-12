@@ -6,7 +6,7 @@
 /*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 19:51:50 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/11 19:43:12 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:58:15 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
