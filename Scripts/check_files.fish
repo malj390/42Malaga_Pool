@@ -29,3 +29,9 @@ function check_header
         printf "\n" 
     end
 end
+
+funcsave check_outputs
+funcsave check_includes
+funcsave check_ft_nomain
+funcsave check_header
+
