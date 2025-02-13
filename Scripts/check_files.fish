@@ -38,9 +38,20 @@ function check_ftnames
     end
 end
 
+function manclip
+    if test (count $argv) -eq 0
+        echo "Uso: manclip <comando>"
+        return 1
+    end
+    man $argv[1] | sed -n '/^DESCRIPTION/,/^[A-Z]/{ /^[A-Z][a-z]/!p }' | xclip -selection clipboard
+    echo "Sección DESCRIPTION de '$argv[1]' copiada al portapapeles."
+end
+
+
 funcsave check_outputs
 funcsave check_includes
 funcsave check_ft_nomain
 funcsave check_header
 funcsave check_ftnames
+funcsave manclip
 
