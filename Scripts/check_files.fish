@@ -43,9 +43,10 @@ function manclip
         echo "Uso: manclip <comando>"
         return 1
     end
-    man $argv[1] | sed -n '/^DESCRIPTION/,/^[A-Z]/{ /^[A-Z][a-z]/!p }' | xclip -selection clipboard
-    echo "Sección DESCRIPTION de '$argv[1]' copiada al portapapeles."
+    man $argv[1] | sed -n '/^DESCRIPTION/,/^[A-Z]/{ /^[A-Z][a-z]/!p }' | sed 's/^ *//' | fold -w 80 | xclip -selection clipboard
+    echo "Sección DESCRIPTION de '$argv[1]' copiada al portapapeles con líneas de 80 caracteres y sin sangría."
 end
+
 
 
 funcsave check_outputs
