@@ -6,13 +6,23 @@
 /*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 18:02:31 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/13 18:23:45 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/13 20:01:55 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char *ft_strcat(char *dest, char *src)
 {
+	int	i;
+	int	j;
 	
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while()
+
+
 }
 
 /*
