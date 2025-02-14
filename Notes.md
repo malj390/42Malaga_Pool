@@ -72,6 +72,7 @@ rev
 paste
 bc
 basename
+xargs : Example >> find . -name "*nbr*" | xargs cat
 ```
 # 42 Header
 
