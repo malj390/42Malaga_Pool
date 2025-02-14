@@ -1,55 +1,76 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   my_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlermo-j <mlermo-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/14 14:14:09 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/14 14:22:35 by mlermo-j         ###   ########.fr       */
+/*   Created: 2025/02/14 13:41:20 by mlermo-j          #+#    #+#             */
+/*   Updated: 2025/02/14 14:13:30 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void ft_putstr(char *str)
+void	ft_putnbr(int n)
 {
-	int	i;
+	long nb = n;
 
-	i = 0;
-	while(str[i] != '\0')
+	if (nb < 0)
 	{
-		ft_putchar(str[i]);
-		i++;
+		putchar('-');
+		nb = -nb;
 	}
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	putchar((nb % 10) + '0');
 }
 
-int	ft_strlen(char *str)
+void	ft_putstr(const char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i] != '\0')
 	{
+		putchar(str[i]);
 		i++;
 	}
-	return (i);
 }
 
-int main(void)
+int my_atoi(char *p)
 {
-	char str[] = "1234567";
-	char r;
+	int k;
+	int i;
+	
+	i = 0;
+	k = 0;
+	while (p[i] != '\0')
+   	{
+		k = k * 10 + (p[i]) - '0';
+		p++;
+	}
+	return k;
+}
 
-	ft_putstr("The length of ");
-	ft_putstr(str);
+int	main(void)
+{
+	char	*a;
+	int	r;
+
+
+	a = "1";
+	r = my_atoi(a) + my_atoi(a);
+	ft_putstr("The sum of ");
+	ft_putnbr(my_atoi(a));
+	ft_putstr(" + ");
+	ft_putnbr(my_atoi(a));
 	ft_putstr(" is ");
-	r = ft_strlen(str) + '0';
-	ft_putchar(r);
+	ft_putnbr(r);
 	return (0);
 }
