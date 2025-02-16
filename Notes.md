@@ -120,6 +120,8 @@ cc -Wall -Wextra -Werror ft_files.c main.c    OR    *.c
 
 Optional: cc -Wall -Wextra -Werror ft_files.c main.c -o program.out
 ./program.out
+
+valgrind --leak-check=full ./a.out
 ```
 
 
