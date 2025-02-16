@@ -6,11 +6,11 @@
 /*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 13:25:26 by adiaz-sa          #+#    #+#             */
-/*   Updated: 2025/02/16 21:50:40 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/16 21:27:54 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FUNCTIONS_H"
+#include "FUNCTIONS_H.h"
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -32,8 +32,8 @@ char	*create_dynamic_array(int size)
 int	get_bytes_size(char *str)
 {
 	char		buffer[1];
-	long int	bytesread;
-	long int	filesize;
+	long int	bytesRead;//aqui dice que ya lo estas usando
+	long int	fileSize;//aqui dice que ya lo estas usando
 	int			fd;
 
 	fd = open(str, O_RDONLY);
@@ -42,29 +42,28 @@ int	get_bytes_size(char *str)
 		ft_putstr("Error! File couldn't be readed.\n");
 		return (1);
 	}
-	filesize = 0;
-	bytesread = read(fd, buffer, 1);
-	while (bytesread > 0)
+	fileSize = 0;
+	while ((bytesRead = read(fd, buffer, 1)) > 0)
 	{
-		filesize++;
+		fileSize++;
 	}
-	if (bytesread == -1)
+	if (bytesRead == -1)
 	{
 		ft_putstr("Error! Not read byte size from file.\n");
 		close(fd);
 		return (1);
 	}
 	close(fd);
-	return ((long long)filesize);
+	return ((long long)fileSize);
 }
 
 char	*read_file_to_array(char *filename)
 {
+	int	bytesRead;//aqui dice que ya lo estas usando
+	int	totalRead;//aqui dice que ya lo estas usando
+	int	fd;
+	int	buffer_size;
 	char	*array;
-	int		bytesread;
-	int		totalread;
-	int		fd;
-	int		buffer_size;
 
 	buffer_size = get_bytes_size(filename);
 	fd = open(filename, O_RDONLY);
@@ -75,21 +74,22 @@ char	*read_file_to_array(char *filename)
 		return (NULL);
 	}
 	array = create_dynamic_array(buffer_size);
-	totalread = 0;
-	bytesread = read(fd, array + totalread, buffer_size)
-	while (bytesread > 0)
+	totalRead = 0;
+	while ((bytesRead = read(fd, array + totalRead, buffer_size)) > 0)
 	{
-		totalread = totalread + bytesread;
+		totalRead = totalRead + bytesRead;
 	}
-	if (bytesread == -1)
+	if (bytesRead == -1)
 	{
 		write(2, "Error reading the file\n", 23);
 		ft_putstr("Make sure numbers.dict has the proper format\n");
-		close(fd);
+		close(fd);// Close the file before returning
 		return (NULL);
 	}
 	else
-		array[totalread] = '\0';
+		array[totalRead] = '\0';
+// Esta linea es solo para comprobar que lee bien el archivo
+//write(1, array, totalRead);
 	close(fd);
 	return (array);
 }

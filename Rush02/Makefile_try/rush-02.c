@@ -6,11 +6,11 @@
 /*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 14:09:25 by adiaz-sa          #+#    #+#             */
-/*   Updated: 2025/02/16 16:45:28 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/16 21:27:59 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FUNCTIONS_H"
+#include "FUNCTIONS_H.h"
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
