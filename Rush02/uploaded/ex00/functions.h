@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FUNCTIONS_H                                        :+:      :+:    :+:   */
+/*   functions.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtoribio <jtoribio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 18:49:30 by jtoribio          #+#    #+#             */
-/*   Updated: 2025/02/16 18:49:34 by jtoribio         ###   ########.fr       */
+/*   Updated: 2025/02/16 23:07:57 by jtoribio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -32,7 +31,7 @@ char	*ft_strncpy(char *dest, char *src, int n);
 char	**split_digits(char *str);
 char	**split_text(char *str);
 void	find_word(char **digits, char **text, char *match,  int len);
-int my_atoi(char *p);
+unsigned long my_atoi(char *p);
 void reverse_str(char *str, int len);
 char *ft_itoa(int num, char *buffer);
 

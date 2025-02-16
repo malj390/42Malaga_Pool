@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   array_tools.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtoribio <jtoribio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 13:25:26 by adiaz-sa          #+#    #+#             */
-/*   Updated: 2025/02/16 21:27:54 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/16 23:00:47 by jtoribio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FUNCTIONS_H.h"
+#include "functions.h"
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -32,8 +32,8 @@ char	*create_dynamic_array(int size)
 int	get_bytes_size(char *str)
 {
 	char		buffer[1];
-	long int	bytesRead;//aqui dice que ya lo estas usando
-	long int	fileSize;//aqui dice que ya lo estas usando
+	long int	bytesRead;
+	long int	fileSize;
 	int			fd;
 
 	fd = open(str, O_RDONLY);
@@ -59,8 +59,8 @@ int	get_bytes_size(char *str)
 
 char	*read_file_to_array(char *filename)
 {
-	int	bytesRead;//aqui dice que ya lo estas usando
-	int	totalRead;//aqui dice que ya lo estas usando
+	int	bytesRead;
+	int	totalRead;
 	int	fd;
 	int	buffer_size;
 	char	*array;
@@ -83,13 +83,11 @@ char	*read_file_to_array(char *filename)
 	{
 		write(2, "Error reading the file\n", 23);
 		ft_putstr("Make sure numbers.dict has the proper format\n");
-		close(fd);// Close the file before returning
+		close(fd);
 		return (NULL);
 	}
 	else
 		array[totalRead] = '\0';
-// Esta linea es solo para comprobar que lee bien el archivo
-//write(1, array, totalRead);
 	close(fd);
 	return (array);
 }

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rush-02.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtoribio <jtoribio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 14:09:25 by adiaz-sa          #+#    #+#             */
-/*   Updated: 2025/02/16 21:27:59 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/16 23:08:09 by jtoribio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FUNCTIONS_H.h"
-#include <fcntl.h>
+#include "functions.h"
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -42,9 +41,8 @@ char	*ft_strncpy(char *dest, char *src, int n)
 	return (dest);
 }
 
-char	**split_digits(char *str)//Muchas variables, maximo 5
+char	**split_digits(char *str)
 {
-	int		n_lines;
 	char	**big_ptr;
 	char	*small_ptr;
 	int		i;
@@ -53,8 +51,7 @@ char	**split_digits(char *str)//Muchas variables, maximo 5
 
 	i = 0;
 	j = 0;
-	n_lines = count_lines(str);
-	big_ptr = (char **)malloc(n_lines * 8); // Hacen falta 8 bytes para guardar una direccion de memoria
+	big_ptr = (char **)malloc(count_lines(str) * 8);
 	while (str[i] != 0)
 	{
 		if (i == 0 || str[i - 1] == '\n')
@@ -63,7 +60,7 @@ char	**split_digits(char *str)//Muchas variables, maximo 5
 			small_ptr = create_dynamic_array(dig_len + 1);
 			big_ptr[j] = small_ptr;
 			ft_strncpy(small_ptr, &str[i], dig_len);
-			i = i + dig_len - 1;// el -1 es pq hay un i++ justo debajo y no quiero perder un caracter (aunque daría igual)
+			i = i + dig_len - 1;
 			j++;
 		}
 		i++;
@@ -73,7 +70,6 @@ char	**split_digits(char *str)//Muchas variables, maximo 5
 
 char	**split_text(char *str)//Demasiadas variables
 {
-	int		n_lines;
 	int		text_len;
 	int		i;
 	int		j;
@@ -82,8 +78,7 @@ char	**split_text(char *str)//Demasiadas variables
 
 	i = 0;
 	j = 0;
-	n_lines = count_lines(str);
-	big_ptr = (char **) malloc(n_lines * 8);
+	big_ptr = (char **) malloc(count_lines(str) * 8);
 	while (str[i] != '\0')
 	{
 		if (i > 0 && str[i - 1] == ':')
@@ -92,7 +87,7 @@ char	**split_text(char *str)//Demasiadas variables
 			small_ptr = create_dynamic_array(text_len + 1);
 			big_ptr[j] = small_ptr;
 			ft_strncpy(small_ptr, &str[i], text_len);
-			i = i + text_len - 1;// el -1 es pq hay un i++ justo debajo y no quiero perder un caracter (aunque daría igual)
+			i = i + text_len - 1;
 			j++;
 		}
 		i++;

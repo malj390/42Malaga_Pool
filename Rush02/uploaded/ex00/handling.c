@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   handling.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtoribio <jtoribio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 13:44:09 by adiaz-sa          #+#    #+#             */
-/*   Updated: 2025/02/16 21:27:56 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/16 23:08:02 by jtoribio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FUNCTIONS_H.h"
-#include <fcntl.h>
+#include "functions.h"
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -53,9 +52,9 @@ void	ft_putnbr(int nbr)
 	}
 }
 
-int my_atoi(char *p)
+unsigned long my_atoi(char *p)
 {
-	int k;
+	unsigned long k;
 	int i;
 	
 	i = 0;
