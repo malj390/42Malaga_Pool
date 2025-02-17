@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 12:14:19 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/13 18:39:57 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/17 20:47:27 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 
 	i = 0;
 	r = 0;
-	while (s1[i] != '\0' && i < n)
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
 		if (s1[i] != s2[i])
 			r = s1[i] - s2[i];
