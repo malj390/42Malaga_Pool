@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlermo-j <mlermo-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 12:59:51 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/17 12:59:53 by mlermo-j         ###   ########.fr       */
+/*   Created: 2025/02/17 12:59:09 by mlermo-j          #+#    #+#             */
+/*   Updated: 2025/02/17 12:59:12 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strcat(char *dest, char *src);
+char *ft_strncat(char *dest, char *src, unsigned int nb);
 
 char	*f(char *str)
 {
@@ -25,7 +25,7 @@ int	main(void)
 	char	*src = "That";	// Non changeable array
 
 	printf("%s\n", dest);
-	ft_strcat(dest, src);
+	ft_strncat(dest, src, 3);
 	printf("%s\n", dest);
 	return (0);
 
