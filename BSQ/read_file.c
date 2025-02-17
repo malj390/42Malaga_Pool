@@ -80,3 +80,46 @@ int	get_bytes_size(char *str)
 	close(fd);
 	return ((long long)fileSize);
 }
+
+char **create_dynamic_2D_array(int rows, int cols)
+{
+    char **array;
+    int i;
+
+    // Allocate memory for row pointers
+    array = (char **)malloc(rows * 8);
+    if (array == NULL)
+    {
+        ft_putstr("Error assigning memory for rows\n");
+        return NULL;
+    }
+
+    // Allocate memory for each row
+    for (i = 0; i < rows; i++)
+    {
+        array[i] = (char *)malloc((cols + 1) * 8); // +1 for null terminator
+        if (array[i] == NULL)
+        {
+            ft_putstr("Error assigning memory for a row\n");
+            
+            // Free already allocated memory before returning NULL
+            while (--i >= 0)
+                free(array[i]);
+            free(array);
+            return NULL;
+        }
+    }
+    
+    return array;
+}
+
+// Free memory function
+void free_dynamic_2D_array(char **array, int rows)
+{
+    for (int i = 0; i < rows; i++)
+        free(array[i]);
+    free(array);
+}
+
+
+

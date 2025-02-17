@@ -12,5 +12,7 @@ void	ft_putchar(char c);
 void	ft_putstr(char *str);
 int	count_char(char *str, char target);
 int	count(char *str);
+char **create_dynamic_2D_array(int rows, int cols);
+void free_dynamic_2D_array(char **array, int rows);
 
 #endif
