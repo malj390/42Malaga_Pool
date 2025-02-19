@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   my_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42malaga.c      +#+  +:+       +#+        */
+/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 13:41:20 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/14 14:13:30 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/19 13:00:03 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,17 +45,24 @@ void	ft_putstr(const char *str)
 
 int my_atoi(char *p)
 {
-	int k;
-	int i;
-	
-	i = 0;
-	k = 0;
-	while (p[i] != '\0')
-   	{
-		k = k * 10 + (p[i]) - '0';
-		p++;
-	}
-	return k;
+    int k = 0;
+    int i = 0;
+    int sign = 1;
+
+    while (p[i] == ' ' || p[i] == '\t' || p[i] == '\n')
+        i++;
+    if (p[i] == '-' || p[i] == '+')
+    {
+        if (p[i] == '-')
+            sign = -1;
+        i++;
+    }
+    while (p[i] >= '0' && p[i] <= '9')
+    {
+        k = k * 10 + (p[i] - '0');
+        i++;
+    }
+    return (k * sign);
 }
 
 int	main(void)
