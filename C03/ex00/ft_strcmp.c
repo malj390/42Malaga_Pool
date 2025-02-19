@@ -6,24 +6,22 @@
 /*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:06:42 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/17 19:10:24 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/19 19:59:25 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	r;
 
 	i = 0;
-	r = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])
-			r = s1[i] - s2[i];
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (r);
+	return (s1[i] - s2[i]);
 }
 
 /*

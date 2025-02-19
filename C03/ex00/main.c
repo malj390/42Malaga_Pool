@@ -6,7 +6,7 @@
 /*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:44:23 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/17 20:20:10 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/19 19:48:28 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strcmp(char *s1, char *s2);
 int	main(void)
 {
 	char s1[] = "ABC";
-	char s2[] = "DFG";
+	char s2[] = "AFC";
 	char s3[] = "";
 	char s4[] = "ABC";
 
