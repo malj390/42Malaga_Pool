@@ -1,52 +1,73 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   functions.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/19 12:45:50 by mlermo-j          #+#    #+#             */
+/*   Updated: 2025/02/19 18:53:29 by mlermo-j         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FUNCTIONS_H
-#define FUNCTIONS_H
+# define FUNCTIONS_H
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+# include <fcntl.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
 
-typedef struct s_map
+# define BUFFER_SIZE 4096
+
+typedef struct s_Square
 {
-	char *array;
-	char *arraytrimmed;
-    char number[2];
-    int	numberint;      
-    char linesymbol;     
-    char obstaclesymbol; 
-    char squaresymbol;
-    int	len;
-    int lentrimmed;
-	int	cols;
-	int	rows;
-	char **array_2D;
-} t_map;
+	int	row;
+	int	col;
+	int	size;
+}	t_Square;
 
+typedef struct s_Symbols
+{
+	char	background;
+	char	obstacle;
+	char	fill;
+}	t_Symbols;
 
-char	*read_file_to_array(char *filename);
-char	*create_dynamic_array(int size);
-int *create_dynamic_arrayint(int size);
-int	get_bytes_size(char *str);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-int	count_char(char *str, char target);
-int	count(char *str);
-char **create_dynamic_2D_array(int rows, int cols);
-void free_dynamic_2D_array(char **array, int rows);
-int	count_until_char(char *str, char target);
-void	ft_putnbr(int n);
-int count_between_targets(char *str, char target);
-t_map	read_file_to_tmap(char *filename);
-int my_atoi(char *p);
-char* remove_first_five_positions(char *array);
-char **convert_1D_to_2D(char *array_1D, int rows, int cols);
-void	print_array_1D(char *array, int len);
-void	print_array_2D(char **array, int rows, int cols);
-void    solver(int **array, int rows, int cols);
-int **create_dynamic_2D_array_int(int rows, int cols);
-void free_dynamic_2D_arrayint(int **array, int rows);
-int **transformer(char **array, int rows, int cols);
-void find_largest_square(char **grid, int rows, int cols);
+typedef struct s_dataMap
+{
+	t_Symbols	symbols;
+	char		**map;
+	int			rows;
+	int			cols;
+}	t_dataMap;
 
+// analysis.c
+t_Symbols	analyze_symbols(char *content, int *i);
+int			fill_map(char *content, t_dataMap *data_map, int i);
+int			validate_and_fill_row(t_dataMap *data_map, char *content, \
+									int start, int row);
+int			analyze_map(char *content, t_dataMap *data_map);
+int			solver(char *content);
+// array_tools.c
+int			**create_array(int rows, int cols);
+void		free_array(int **array, int rows);
+void		free_map(char **map, int rows);
+void		print_map(char **map, int rows);
+int			**init_dp_array(int rows, int cols);
+
+// square_tools.c
+t_Square	update_square(int i, int j, int size, t_Square best);
+int			compute_dp_cell(int **dp, t_dataMap *data_map, int i, int j);
+t_Square	process_map(t_dataMap *data_map, int **dp);
+t_Square	find_max_square(t_dataMap *data_map);
+void		fill_square(char **map, t_Square square, t_Symbols symbols);
+
+// utils.c
+void		ft_putstr(char *str);
+int			my_atoi(char *p);
+char		*read_file(char *filename);
+char		*read_stdin(void);
+int			get_line_length(char *content, int *i);
 
 #endif
