@@ -2,11 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   analysis.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ergomez- <ergomez-@student.42malaga.com>     +:+ +:+         +:+     */
+/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 13:23:51 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/19 18:40:18 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/20 11:03:22 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_Symbols	analyze_symbols(char *content, int *i)
 	t_Symbols	symbols;
 
 	index = 0;
+	if (!(content[index] >= '0' && content[index] <= '9'))
+		ft_putstr("Error!, header wrong.\n");
 	while (content[index] >= '0' && content[index] <= '9')
 		index++;
 	symbols = (t_Symbols){content[index], \

@@ -2,8 +2,8 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   array_tools.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ergomez- <ergomez-@student.42malaga.com>     +:+ +:+         +:+     */
+/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 13:24:19 by mlermo-j          #+#    #+#             */
 /*   Updated: 2025/02/19 18:30:16 by mlermo-j         ###   ########.fr       */

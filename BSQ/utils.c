@@ -2,11 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ergomez- <ergomez-@student.42malaga.com>     +:+ +:+         +:+     */
+/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 13:24:34 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/19 18:40:28 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/20 10:41:26 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

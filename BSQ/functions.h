@@ -2,8 +2,8 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   functions.h                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ergomez- <ergomez-@student.42malaga.com>     +:+ +:+         +:+     */
+/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 12:45:50 by mlermo-j          #+#    #+#             */
 /*   Updated: 2025/02/19 18:53:29 by mlermo-j         ###   ########.fr       */

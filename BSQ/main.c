@@ -2,11 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mlermo-j <mlermo-j@student.42malaga.c      +#+  +:+       +#+        */
+/*   By: ergomez- <ergomez-@student.42malaga.com>     +:+ +:+         +:+     */
+/*   By: mlermo-j <mlermo-j@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 16:59:28 by mlermo-j          #+#    #+#             */
-/*   Updated: 2025/02/19 19:39:19 by mlermo-j         ###   ########.fr       */
+/*   Updated: 2025/02/20 10:43:25 by mlermo-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
