@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		ft_putstr("argv[argc] with value = ");
-		ft_putstr(argv[argc]);	
+		ft_putstr(argv[argc - 1]);	
 	}	
 	return (0);
 }
