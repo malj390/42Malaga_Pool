@@ -16,6 +16,12 @@ int	main(int argc, char **argv)
 {
 	char	*content;
 	int		i;
+	
+	if (argv[0][6] != 'e')
+	{
+		ft_putstr("Error, the input is not valid.");
+		return (0);
+	}
 
 	if (argc < 2)
 	{
