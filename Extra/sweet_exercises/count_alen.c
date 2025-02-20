@@ -54,7 +54,11 @@ int	main(void)
 
 	res = count_alen(str);
 	res2 = count_alen(str2);
+	ft_putstr(str);
+	ft_putstr(" len = ");
 	ft_putnbr(res);
 	ft_putstr("\n");
+	ft_putstr(str2);
+	ft_putstr(" len = ");
 	ft_putnbr(res2);
 }
