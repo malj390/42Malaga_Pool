@@ -5,7 +5,7 @@ int *ft_range(int start, int end)
 {
     int *array;
     int size;
-    int i;
+    int i = 0;
 
     if (start > end)
         return NULL;
@@ -15,8 +15,12 @@ int *ft_range(int start, int end)
     if (array == NULL)
         return NULL;
 
-    for (i = 0; i < size; i++)
-        array[i] = start + i;
+    while (start <= end)
+    {
+        array[i] = start;
+        start++;
+        i++;
+    }
 
     return array;
 }
@@ -29,8 +33,12 @@ int main()
     
     if (arr)
     {
-        for (int i = 0; i <= (end - start); i++)
+        int i = 0;
+        while (i <= (end - start))
+        {
             printf("%d ", arr[i]);
+            i++;
+        }
         printf("\n");
 
         free(arr);
